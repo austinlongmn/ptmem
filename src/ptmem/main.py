@@ -8,6 +8,13 @@ def main():
     parser = argparse.ArgumentParser(description="Convert PTMem files to JSON")
     parser.add_argument("input", help="Input file")
     parser.add_argument("output", help="Output file")
+    parser.add_argument(
+        "-t",
+        "--output-type",
+        choices=["json", "fla.sh"],
+        default="json",
+        help="Output file type (default: json)",
+    )
     args = parser.parse_args()
 
     # Read the file
@@ -41,7 +48,14 @@ def main():
 
     # Write the JSON file
     with open(args.output, "w") as f:
-        json.dump(cards, f, indent=4)
+        if args.output_type == "json":
+            json.dump(cards, f, indent=4)
+        elif args.output_type == "fla.sh":
+            for card in cards:
+                print(f"{card['category']}", end=":", file=f)
+                print(f"{'; '.join(card['questions'])}", end=":", file=f)
+                print(f"{'; '.join(card['answers'])}", end=":", file=f)
+                print("0", file=f)
 
 
 if __name__ == "__main__":
