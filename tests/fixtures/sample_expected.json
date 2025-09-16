@@ -1,0 +1,166 @@
+[
+    {
+        "questions": [
+            "What is 2 + 2?"
+        ],
+        "answers": [
+            "4"
+        ],
+        "category": "Mathematics"
+    },
+    {
+        "questions": [
+            "What is the square root of 16?"
+        ],
+        "answers": [
+            "4"
+        ],
+        "category": "Mathematics"
+    },
+    {
+        "questions": [
+            "What are the first three prime numbers?"
+        ],
+        "answers": [
+            "2",
+            "3",
+            "5"
+        ],
+        "category": "Mathematics"
+    },
+    {
+        "questions": [
+            "What is the chemical symbol for water?"
+        ],
+        "answers": [
+            "H2O"
+        ],
+        "category": "Science"
+    },
+    {
+        "questions": [
+            "What gas do plants absorb during photosynthesis?"
+        ],
+        "answers": [
+            "Carbon dioxide",
+            "CO2"
+        ],
+        "category": "Science"
+    },
+    {
+        "questions": [
+            "Who developed the theory of relativity?"
+        ],
+        "answers": [
+            "Albert Einstein"
+        ],
+        "category": "Science"
+    },
+    {
+        "questions": [
+            "When did World War II end?"
+        ],
+        "answers": [
+            "1945"
+        ],
+        "category": "History"
+    },
+    {
+        "questions": [
+            "Who was the first president of the United States?"
+        ],
+        "answers": [
+            "George Washington"
+        ],
+        "category": "History"
+    },
+    {
+        "questions": [
+            "In what year did the Berlin Wall fall?"
+        ],
+        "answers": [
+            "1989"
+        ],
+        "category": "History"
+    },
+    {
+        "questions": [
+            "What is the capital of France?",
+            "What city is the capital of France?"
+        ],
+        "answers": [
+            "Paris"
+        ],
+        "category": "Geography"
+    },
+    {
+        "questions": [
+            "Which is the largest ocean?"
+        ],
+        "answers": [
+            "Pacific Ocean"
+        ],
+        "category": "Geography"
+    },
+    {
+        "questions": [
+            "What are the seven continents?"
+        ],
+        "answers": [
+            "Asia",
+            "Africa",
+            "North America",
+            "South America",
+            "Antarctica",
+            "Europe",
+            "Australia"
+        ],
+        "category": "Geography"
+    },
+    {
+        "questions": [
+            "Who wrote \"Romeo and Juliet\"?"
+        ],
+        "answers": [
+            "William Shakespeare"
+        ],
+        "category": "Literature"
+    },
+    {
+        "questions": [
+            "What is the first book in the Harry Potter series?"
+        ],
+        "answers": [
+            "Harry Potter and the Philosopher's Stone",
+            "Harry Potter and the Sorcerer's Stone"
+        ],
+        "category": "Literature"
+    },
+    {
+        "questions": [
+            "What does CPU stand for?"
+        ],
+        "answers": [
+            "Central Processing Unit"
+        ],
+        "category": "Programming"
+    },
+    {
+        "questions": [
+            "What programming language is known for \"write once, run anywhere\"?"
+        ],
+        "answers": [
+            "Java"
+        ],
+        "category": "Programming"
+    },
+    {
+        "questions": [
+            "What does HTML stand for?"
+        ],
+        "answers": [
+            "HyperText Markup Language"
+        ],
+        "category": "Programming"
+    }
+]

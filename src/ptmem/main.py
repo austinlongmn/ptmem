@@ -44,8 +44,10 @@ def main():
             card["category"] = category
             cards.append(card)
             card = {"questions": [], "answers": [], "category": None}
-    card["category"] = category
-    cards.append(card)
+
+    if len(card["questions"]) > 0:
+        card["category"] = category
+        cards.append(card)
 
     # Write the output file
     if args.output_type == "json":

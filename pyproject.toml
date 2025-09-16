@@ -6,8 +6,20 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
 
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
 [tool.uv]
 package = true
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-cov>=7.0.0",
+]
 
 [project.scripts]
 ptmem = "ptmem.main:main"
