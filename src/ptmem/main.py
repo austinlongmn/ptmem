@@ -7,7 +7,7 @@ import os
 def main():
     # Parse command line arguments
     parser = argparse.ArgumentParser(description="Convert PTMem files to JSON")
-    parser.add_argument("input", help="Input file")
+    parser.add_argument("input", nargs="+", help="Input file(s)")
     parser.add_argument("output", help="Output file")
     parser.add_argument(
         "-t",
@@ -18,13 +18,16 @@ def main():
     )
     args = parser.parse_args()
 
-    # Read the file
+    # Read the file(s)
 
-    if args.input == "-":
+    lines = []
+    if len(args.input) == 1 and args.input[0] == "-":
         lines = sys.stdin.readlines()
     else:
-        with open(args.input, "r") as f:
-            lines = f.readlines()
+        for input_file in args.input:
+            with open(input_file, "r") as f:
+                file_lines = f.readlines()
+                lines.extend(file_lines)
 
     # Parse the file
     cards = []
@@ -57,7 +60,7 @@ def main():
         # Create new fla.sh format lines
         new_lines = []
         for card in cards:
-            line = f"{card['category']}:{'; '.join(card['questions'])}:{'; '.join(card['answers'])}:0"
+            line = f"{card['category'].replace(':', '—')}:{'; '.join(card['questions']).replace(':', '—')}:{'; '.join(card['answers']).replace(':', '—')}:0"
             new_lines.append(line)
 
         # If output file exists, preserve confidence scores for matching cards

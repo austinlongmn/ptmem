@@ -1,7 +1,8 @@
 import json
-import tempfile
 import os
+import tempfile
 from unittest.mock import patch
+
 from ptmem.main import main
 
 
@@ -416,9 +417,9 @@ Math:Another:Question:Answer:5:extra:fields
 - What time is it at 12:30 PM?
 + It's 12:30 PM: afternoon time
 """
-        # The colons in content should be preserved in the flash format
+        # The colons in content should be removed in flash format because they will conflict with the delimiters
         expected_lines = [
-            "Time:What time is it at 12:30 PM?:It's 12:30 PM: afternoon time:0"
+            "Time:What time is it at 12—30 PM?:It's 12—30 PM— afternoon time:0"
         ]
 
         with tempfile.NamedTemporaryFile(
